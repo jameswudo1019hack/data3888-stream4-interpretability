@@ -1,0 +1,8 @@
+shiny>=1.0
+shinyswatch>=0.7
+torch>=2.1
+timm>=0.9
+grad-cam>=1.5
+Pillow>=10.0
+numpy>=1.24
+matplotlib>=3.7

@@ -1,0 +1,57 @@
+# ---- Raw data (28 GB; redistributable GEO dataset GSM7780153 — link, don't re-host) ----
+Images/
+data/
+*.zip
+*.ome.tif
+*.tif
+*.Rds
+# metadata/: keep the small R export script + 3-point CSV, drop the big data files
+metadata/*.xlsx
+metadata/cbr.csv
+metadata/cell_boundaries.csv
+
+# ---- Trained model checkpoints (~1 GB; regenerate via scripts/stream4_pipeline.py) ----
+*.pt
+*.pth
+
+# ---- Private / coursework documents (not for public repo) ----
+Final_Presentation/
+docs/
+*.docx
+*.pdf
+*.pptx
+Reflective_Statement.*
+DATA3888_S4_presenter_script.*
+DATA3888_S4_QnA_master_guide.md
+DATA3888_S4_capstone_deck.*
+PRESENTATION_PREP.md
+Thesis Topic Options.docx
+
+# ---- Loose scanned/exported images at repo root ----
+scriptpg-*.jpg
+scriptv2-*.jpg
+scriptv3-*.jpg
+qna*-*.jpg
+Pasted image *.png
+
+# ---- Logs ----
+logs/
+*.log
+
+# ---- Editor / tool state ----
+.obsidian/
+obsidian/
+.claude/
+app/_screenshots/
+
+# ---- OS / Python junk ----
+.DS_Store
+*.tmp
+.~lock.*#
+~$*
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
