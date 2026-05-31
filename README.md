@@ -26,6 +26,12 @@ pip install torch timm pytorch-grad-cam scikit-learn numpy pandas matplotlib pil
 GPU optional. Training runs on CUDA, Apple MPS, or CPU (auto-detected); each
 seed takes ~5–10 min on a Colab GPU.
 
+> **Just want to reproduce the report's figures and numbers?** See
+> [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md). Tier 0 regenerates every figure
+> and table from cached results in ~10 s — no data download, no GPU, no
+> retraining. Exact package versions are pinned in
+> [`requirements.txt`](requirements.txt).
+
 ## 2. Data
 
 The image bundle (per-class H&E crops) comes from the 10x Genomics Xenium
