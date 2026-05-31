@@ -43,21 +43,22 @@ Cached inputs these read from (all committed):
 
 ---
 
-## Tier 1 — run the interactive Shiny demo (needs the 2 seed-42 checkpoints)
+## Tier 1 — run the interactive Shiny demo (~30 s, no data, no GPU)
 
-The app loads the seed-42 ResNet-50 and ViT-small checkpoints. They are *not*
-committed (~90 MB each). Regenerate just those two (~3–5 min each on a laptop
-GPU / Apple MPS), then launch:
+The two **seed-42** checkpoints the app loads (ResNet-50 and ViT-small) **are
+committed** to the repo, so the demo runs out-of-the-box — no data download and
+no training needed:
 
 ```bash
-MODEL=resnet50               SEED=42 python scripts/stream4_pipeline.py
-MODEL=vit_small_patch16_224  SEED=42 python scripts/stream4_pipeline.py
 shiny run app/app.py    # open http://127.0.0.1:8000
 ```
 
-(Tier 1 needs the raw data — see Tier 2 step 1 — because training reads the
-patches. If you only want to *see* the app without training, contact us for the
-two checkpoint files.)
+Upload an H&E patch (or pick a curated demo) and compare both models'
+predictions, softmax probabilities and Grad-CAM heatmaps, with live blur and
+centre/edge-fill controls.
+
+The other 8 checkpoints (seeds 43–46 × 2 architectures) are *not* committed
+(~90 MB each); regenerate them via Tier 2 if you want the full multi-seed set.
 
 ---
 

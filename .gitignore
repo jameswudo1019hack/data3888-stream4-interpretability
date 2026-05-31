@@ -13,6 +13,10 @@ metadata/cell_boundaries.csv
 # ---- Trained model checkpoints (~1 GB; regenerate via scripts/stream4_pipeline.py) ----
 *.pt
 *.pth
+# ...except the two seed-42 checkpoints the Shiny app loads (so the demo runs
+# out-of-the-box and the report's "trained checkpoints" claim holds).
+!figures/v5_grouped/resnet50/seed_42/resnet50_stream4.pt
+!figures/v5_grouped/vit_small_patch16_224/seed_42/vit_small_patch16_224_stream4.pt
 
 # ---- Private / coursework documents (not for public repo) ----
 Final_Presentation/
